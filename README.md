@@ -21,3 +21,9 @@ rustup doc --book
 - [1.3 Hello, Cargo! - notes](docs/notes.md#13-hello-cargo)
 
 - [1.3 Hello, Cargo! - project](/hello_cargo/)
+
+### 2. Guessing game
+
+- [2. Guessing game - notes](docs/notes.md#2-guessing-game)
+
+- [2. Guessing game - project](/guessing_game/)

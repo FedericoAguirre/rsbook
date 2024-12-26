@@ -99,3 +99,7 @@ Build a Rust project using cargo for releasing.
 ```bash
 cargo build --release
 ```
+
+## 2 Guessing game
+
+**TODO**: Add guessing game documentation.
