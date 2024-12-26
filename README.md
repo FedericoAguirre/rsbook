@@ -18,4 +18,6 @@ rustup doc --book
 
 - [1.2 Hello, World! - project](/hello_world/)
 
-- [1.3 Hello, Cargo! - notes](docs/notes.md#12-hello-world)
+- [1.3 Hello, Cargo! - notes](docs/notes.md#13-hello-cargo)
+
+- [1.3 Hello, Cargo! - project](/hello_cargo/)
