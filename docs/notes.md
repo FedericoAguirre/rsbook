@@ -51,3 +51,55 @@ Execute program.
 ```bash
 ./main
 ```
+
+### 1.3 Hello, Cargo
+
+Cargo is the Rust tooling application.
+
+To check **cargo** version.
+
+```bash
+cargo --version
+```
+
+Create a new Rust project using cargo.
+
+```bash
+cargo new hello_cargo
+cd hello_cargo
+```
+
+Create a new Rust project using cargo with git as vcs.
+
+```bash
+cargo new --vcs=git hello_cargo
+cd hello_cargo
+```
+
+Build a Rust project using cargo.
+
+```bash
+cargo build
+```
+
+Execute a Rust project using cargo.
+
+```bash
+cargo run
+```
+
+Check a project compiles without compiling
+
+```bash
+cargo check
+```
+
+Build a Rust project using cargo for releasing.
+
+```bash
+cargo build --release
+```
+
+## 2 Guessing game
+
+**TODO**: Add guessing game documentation.
