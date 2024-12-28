@@ -102,4 +102,82 @@ cargo build --release
 
 ## 2 Guessing game
 
-**TODO**: Add guessing game documentation.
+The **use** keyword imports Rust crates or libraries.
+
+```rust
+use std::io;
+```
+
+Create a **variable**
+
+```rust
+let apples = 5; // immutable
+let mut bananas = 5; // mutable
+```
+
+Dependencies can be added in **Cargo.toml** file.
+
+```toml
+[dependencies]
+rand = "0.8.5"
+```
+
+Dependencies can be added using cargo add and updated with cargo update.
+
+```bash
+cargo add <crate>
+cargo update
+```
+
+Creates local crate documentation.
+
+```bash
+cargo doc --open
+```
+
+### Use of loop, break, continue, match, enum, and Result
+
+- **loop** keyword is used to create infinite loops.
+- **break** keyword break the current loop execution.
+- **continue** keyword skips to the next loop execution.
+- **match** keyword compares values in a variable, prticularly in Enums, Results, and Structs.
+- **enum** is a enumeration in Rust.
+- **Result** is a generic data type which represents a value or an Error.
+
+```rust
+use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
+
+fn main() {
+    println!("Guess the number!");
+
+    let secret_number = rand::thread_rng().gen_range(1..=100);
+
+    loop {
+        println!("Please input your guess.");
+
+        let mut guess = String::new();
+
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line");
+
+        let guess: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_) => continue,
+        };
+
+        println!("You guessed: {guess}");
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+        }
+    }
+}
+```
