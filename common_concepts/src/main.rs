@@ -183,11 +183,15 @@ fn main() {
     }
 
     // Looping in reverse
-    
+
     for number in (1..4).rev() {
         println!("{number}!");
     }
     println!("LIFTOFF!!!");
+
+    let farennheit: f64 = 60.0;
+    let celsius: f64 = farenheit_to_celsius(farennheit);
+    println!("{farennheit} F is equal to {celsius} C")
 }
 
 // Functions
@@ -204,4 +208,8 @@ fn another_function_with_param(x: i32) {
 
 fn print_labeled_measurement(value: i32, unit_label: char) {
     println!("The measurement is: {value}{unit_label}");
+}
+
+fn farenheit_to_celsius(farennheit: f64) -> f64 {
+    (farennheit - 32.0f64) * 5.0f64 / 9.0f64
 }
