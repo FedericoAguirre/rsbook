@@ -189,9 +189,24 @@ fn main() {
     }
     println!("LIFTOFF!!!");
 
+    // Farenheit convertion
+
     let farennheit: f64 = 60.0;
     let celsius: f64 = farenheit_to_celsius(farennheit);
-    println!("{farennheit} F is equal to {celsius} C")
+    println!("{farennheit} F is equal to {celsius} C");
+
+    // Fibonacci
+
+    let limit: u128 = 10;
+
+    for n in 0..limit {
+        let f = fibonacci(n);
+        println!("Fibonacci of {n} is {f}.");
+    }
+
+    // 12 days of Christmas
+
+    twelve_days();
 }
 
 // Functions
@@ -212,4 +227,63 @@ fn print_labeled_measurement(value: i32, unit_label: char) {
 
 fn farenheit_to_celsius(farennheit: f64) -> f64 {
     (farennheit - 32.0f64) * 5.0f64 / 9.0f64
+}
+
+fn fibonacci(n: u128) -> u128 {
+    if n == 0 || n == 1 {
+        n
+    } else {
+        fibonacci(n - 1) + fibonacci(n - 2)
+    }
+}
+
+fn twelve_days() {
+    let days: [String; 12] = [
+        String::from("first"),
+        String::from("second"),
+        String::from("third"),
+        String::from("fourth"),
+        String::from("fifth"),
+        String::from("sixth"),
+        String::from("seventh"),
+        String::from("eighth"),
+        String::from("ninth"),
+        String::from("tenth"),
+        String::from("eleventh"),
+        String::from("twelfth"),
+    ];
+
+    let phrases: [String; 12] = [
+        String::from("A partridge in a pear tree"),
+        String::from("Two turtle doves"),
+        String::from("Three French hens"),
+        String::from("Four calling birds"),
+        String::from("Five gold rings"),
+        String::from("Six geese a-laying"),
+        String::from("Seven swans a-swimming"),
+        String::from("Eight maids a-milking"),
+        String::from("Nine ladies dancing"),
+        String::from("Ten lords a-leaping"),
+        String::from("Eleven pipers piping"),
+        String::from("Twelve drummers drumming"),
+    ];
+
+    let mut actual = 0;
+
+    for day in days {
+        println!("On the {day} day of Christmas my true love sent to me");
+        let mut index = 0;
+
+        while index <= actual {
+            let phrase = &phrases[actual - index];
+            if index == actual {
+                println!("{phrase}\n");
+            } else {
+                println!("{phrase}, and");
+            }
+            index += 1;
+        }
+
+        actual += 1;
+    }
 }
