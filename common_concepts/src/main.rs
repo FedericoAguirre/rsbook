@@ -1,61 +1,11 @@
 fn main() {
-    // floating point variables
-
-    let x = 2.0; // f64
-    let y: f32 = 3.0; // f32
-
-    println!("x: {x}, y: {y}");
-
-    // Operators
-
-    // addition
-    let sum = 5 + 10;
-    println!("sum: {sum}");
-
-    // subtraction
-    let difference = 95.5 - 4.3;
-    println!("difference: {difference}");
-
-    // multiplication
-    let product = 4 * 30;
-    println!("product: {product}");
-
-    // division
-    let quotient = 56.7 / 32.2;
-    let truncated = -5 / 3; // Results in -1
-    println!("quotient: {quotient}, truncated: {truncated}");
-
-    // remainder
-    let remainder = 43 % 5;
-    println!("remainder: {remainder}");
-
-    // Boolean type
-
-    let t = true;
-    let f: bool = false; // with explicit type annotation
-    println!("true: {t}, false: {f}");
-
-    // Character type
-
-    let c = 'z';
-    let z: char = 'ℤ'; // with explicit type annotation
-    let heart_eyed_cat = '😻';
-    println!("c: {c}, z: {z}, heart_eyed_cat: {heart_eyed_cat}");
+    boolean_type();
+    character_type();
+    floating_point();
+    operators();
 
     // Compound types
-
-    // Tuple
-    let tup: (i32, f64, u8) = (500, 6.4, 1);
-    println!("Tuple: {tup:?}");
-    let (_x, y, _z) = tup;
-    println!("The value of y is: {y}");
-
-    // Accesing tuple elements using . and index
-    let x: (i32, f64, u8) = (500, 6.4, 1);
-    let five_hundred = x.0;
-    let six_point_four = x.1;
-    let one = x.2;
-    println!("five_hundred: {five_hundred}, six_point_four: {six_point_four}, one: {one}");
+    tuple();
 
     // Array type
 
@@ -209,6 +159,72 @@ fn main() {
     twelve_days();
 }
 
+fn floating_point() {
+    println!("\n\n----\nFloating types example:\n");
+
+    let x = 2.5; // f64
+    let y: f32 = 3.3; // f32
+
+    println!("x: {x}, y: {y}");
+}
+
+fn boolean_type() {
+    println!("\n\n----\nBoolean type example:\n");
+
+    let t = true;
+    let f: bool = false; // with explicit type annotation
+    println!("true: {t}, false: {f}");
+}
+
+fn character_type() {
+    println!("\n\n----\nCharacter type example:\n");
+    let c = 'z';
+    let z: char = 'ℤ'; // with explicit type annotation
+    let heart_eyed_cat = '😻';
+    println!("c: {c}, z: {z}, heart_eyed_cat: {heart_eyed_cat}");
+}
+
+fn operators() {
+    println!("\n\n----\nOperators example:\n");
+
+    // addition
+    let sum = 5 + 10;
+    println!("sum: {sum}");
+
+    // subtraction
+    let difference = 95.5 - 4.3;
+    println!("difference: {difference}");
+
+    // multiplication
+    let product = 4 * 30;
+    println!("product: {product}");
+
+    // division
+    let quotient = 56.7 / 32.2;
+    let truncated = -5 / 3; // Results in -1
+    println!("quotient: {quotient}, truncated: {truncated}");
+
+    // remainder
+    let remainder = 43 % 5;
+    println!("remainder: {remainder}");
+}
+
+fn tuple() {
+    println!("\n\n----\nTuple example:\n");
+
+    // Tuple
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+    println!("Tuple: {tup:?}");
+    let (_x, y, _z) = tup;
+    println!("The value of y is: {y}");
+
+    // Accesing tuple elements using . and index
+    let x: (i32, f64, u8) = (500, 6.4, 1);
+    let five_hundred = x.0;
+    let six_point_four = x.1;
+    let one = x.2;
+    println!("five_hundred: {five_hundred}, six_point_four: {six_point_four}, one: {one}");
+}
 // Functions
 
 // Function definition
