@@ -181,3 +181,26 @@ fn main() {
     }
 }
 ```
+
+---
+
+## 7 Managing Growing Projects with Packages, Crates, and Modules
+
+The **module system**, include:
+
+- **Packages**: A Cargo feature that lets you build, test, and share crates.
+- **Crates**: A tree of modules that produces a library or executable.
+- **Modules** and use: Let you control the organization, scope, and privacy of paths.
+- **Paths**: A way of naming an item, such as a struct, function, or module.
+
+### Packages and Crates
+
+A **crate** is the smallest amount of code that the Rust compiler considers at a time.
+
+A crate can be: a **binary crate** or a **library crate**.
+
+**Binary crates** are programs, you can run and have a **function main**.
+
+**Library crates** don’t have a main function, they **define functionality intended to be shared** with multiple projects.
+
+A **package is a bundle of crates** that provides a set of functionality. A **package contains a Cargo.toml** file that describes how to build those crates. 
